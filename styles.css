@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1;
+    display: flex;
+}
+
+/*---------------------------------------------*/
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/*Sidebar Content*/
+/*TODO: Adjust items a little to the left on sidebar*/
+.sidebar {
+    background: lightskyblue;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(250px, 20%, 400px);
+    min-width: 250px;
+    min-height: 100vh;
+}
+
+.sidebar > h1,div {
+    flex-direction: column;
+    color: white;
+    gap: 25px;
+}
+
+.sidebar > h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding-left: 15px;
+}
+
+.sidebar > div > a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+/*SVG Icons on Sidebar*/
+
+.sidebar > h1::before {
+    content: url(./svgs/developer-board.svg);
+    position: relative;
+    top: 14px;
+    right: 5px;
+}
+
+.sidebar > div > a::before {
+    padding-right: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.sidebar > div > a:nth-child(1)::before {
+    content: url(./svgs/home.svg);
+}
+
+.sidebar > div > a:nth-child(2)::before {
+    content: url(./svgs/user.svg);
+}
+
+.sidebar > div > a:nth-child(3)::before {
+    content: url(./svgs/message-square.svg);
+}
+
+.sidebar > div > a:nth-child(4)::before {
+    content: url(./svgs/clock.svg);
+}
+
+.sidebar > div > a:nth-child(5)::before {
+    content: url(./svgs/briefcase.svg);
+}
+
+.sidebar > div > a:nth-child(6)::before {
+    content: url(./svgs/users.svg);
+}
+
+.sidebar > div > a:nth-child(7)::before {
+    content: url(./svgs/settings.svg);
+}
+
+.sidebar > div > a:nth-child(8)::before {
+    content: url(./svgs/help-circle.svg);
+}
+
+.sidebar > div > a:nth-child(9)::before {
+    content: url(./svgs/shield.svg);
+}
+
+
+/*Selects Home and create seperation between 
+    dashboard and anchors*/
+.sidebar > div > a:first-child {
+    margin-top: 40px;
+}
+
+/*Gap between communities and settings section*/
+.sidebar > div > a:nth-child(7) {
+    margin-top: 75px;
+}
+
+/*----End of Sidebar Contents----*/
+
+.header {
+    background-color: black;
+    height: 100px;
+    width: 1000px;
+}
